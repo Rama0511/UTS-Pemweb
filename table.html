@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daftar Mahasiswa</title>
+    <link rel="stylesheet" type="text/css" href="css/table.css">
+    <div class="logo-and-title">
+        <img src="img/Logo.png" alt="logo">
+        <h1>HMFI ITERA</h1>
+    </div>
+</head>
+<body>
+    <hr style="width: 100%;">
+    <form>
+        <table>
+            <tr>
+                <td><button class="tombol" type="button" onclick="window.location.href='index.html'">Home</button></a></td>
+                <td><button class="tombol" type="button" onclick="window.location.href='formulir.html'">Formulir Pendaftaran</button></a></td>
+                <td><button class="tombol-active" type="button" onclick="window.location.href='table.html'">Data Anggota</button></a></td>
+            </tr>
+        </table>
+    </form>
+    <hr style="width: 100%;">
+
+    <div id="table-data">
+        <h1>Daftar Anggota HMIF Itera Kabinet Nawasena</h1>
+
+        <table>
+            <tr>
+                <th>Nama</th>
+                <th>NIM</th>
+                <th>Jabatan</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Jenis Kelamin</th>
+                <th>Tanggal Lahir</th>
+                <th>Alamat</th>
+            </tr>
+            <script>
+                const urlParams = new URLSearchParams(window.location.search);
+                const nama = urlParams.get('nama');
+                const nim = urlParams.get('nim');
+                const prodi = urlParams.get('jabatan');
+                const email = urlParams.get('email');
+                const password = urlParams.get('password');
+                const jenisKelamin = urlParams.get('jenis-kelamin');
+                const tanggalLahir = urlParams.get('tanggal-lahir');
+                const alamat = urlParams.get('alamat');
+        
+                if (nama) {
+                    const table = document.querySelector('div table');
+                    const newRow = table.insertRow(-1);
+        
+                    const cell1 = newRow.insertCell(0);
+                    cell1.textContent = nama;
+        
+                    const cell2 = newRow.insertCell(1);
+                    cell2.textContent = nim;
+        
+                    const cell3 = newRow.insertCell(2);
+                    cell3.textContent = prodi;
+        
+                    const cell4 = newRow.insertCell(3);
+                    cell4.textContent = email;
+        
+                    const cell5 = newRow.insertCell(4);
+                    cell5.textContent = "********";
+        
+                    const cell6 = newRow.insertCell(5);
+                    cell6.textContent = jenisKelamin;
+        
+                    const cell7 = newRow.insertCell(6);
+                    cell7.textContent = tanggalLahir;
+        
+                    const cell8 = newRow.insertCell(7);
+                    cell8.textContent = alamat;
+                }
+            </script>
+            <tr>
+                <td>Fitra Ilyasa</td>
+                <td>120140048</td>
+                <td>Ketua Himpunan</td>
+                <td>Fitra.120140048@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Laki-laki</td>
+                <td>2002-05-15</td>
+                <td>Bandar Lampung</td>
+            </tr>
+            <tr>
+                <td>Gery Melia S.</td>
+                <td>120140147</td>
+                <td>Sekretaris Umum 1</td>
+                <td>Gery.120140147@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Perempuan</td>
+                <td>2002-05-15</td>
+                <td>Bandar Lampung</td>
+            </tr>
+            <tr>
+                <td>Sinta Dwi Putri</td>
+                <td>120140033</td>
+                <td>Sekretaris Umum 2</td>
+                <td>Sinta.120140033@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Perempuan</td>
+                <td>2002-05-15</td>
+                <td>Bandar Lampung</td>
+            </tr>
+            <tr>
+                <td>Azka Muzhaffar S.</td>
+                <td>120140111</td>
+                <td>Sekretaris Jendral</td>
+                <td>Azka.120140111@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Laki-laki</td>
+                <td>2002-05-15</td>
+                <td>Bandar Lampung</td>
+            </tr>
+            <tr>
+                <td>Wella Amanda</td>
+                <td>120140048</td>
+                <td>Bendahara Umum 1</td>
+                <td>Wella.120140057@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Perempuan</td>
+                <td>1990-05-15</td>
+                <td>Bandar Lampung</td>
+            </tr>
+            <tr>
+                <td>Murliana </td>
+                <td>120140076</td>
+                <td>Bendahara Umum 1</td>
+                <td>Murliana.120140076@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Perempuan</td>
+                <td>1990-05-15</td>
+                <td>Bandar Lampung</td>
+            </tr>
+            <tr>
+                <td>M. Affan Sa’id</td>
+                <td>120140030</td>
+                <td>Kepala Departemen PSDA</td>
+                <td>M.120140030@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Laki-Laki</td>
+                <td>1990-05-15</td>
+                <td>Bandar Lampung</td>
+            </tr>
+            <tr>
+                <td>Syafira Wulandari</td>
+                <td>120140142</td>
+                <td>Sekretaris Departemen PSDA</td>
+                <td>Syafira.120140142@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Perempuan</td>
+                <td>1990-05-15</td>
+                <td>Bandar Lampung</td>
+            </tr>
+            <tr>
+                <td>Dinda Sela L</td>
+                <td>120140078</td>
+                <td>Bendahara Departemen PSDA</td>
+                <td>Dinda.120140078@student.itera.ac.id</td>
+                <td>********</td>
+                <td>Perempuan</td>
+                <td>1990-05-15</td>
+                <td>Bandar Lampung</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<footer>
+    <p>&copy; Hak Cipta 2023 - Idza Ramaulkim</p>
+</footer>
+</html>
